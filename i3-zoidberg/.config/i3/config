@@ -179,9 +179,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Volume and Media Controls on daskeyboard
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% ; exec pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% ; exec pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle ; exec pkill -RTMIN+10 i3blocks
 
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86AudioNext exec --no-startup-id playerctl next
@@ -194,7 +194,7 @@ bindsym $mod+Shift+w move workspace to output right
 # finds out, if available)
 bar {
 	tray_output primary
-        status_command i3status
+        status_command i3blocks
 }
 
 # Floating windows
