@@ -190,33 +190,12 @@ bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 # Move a workspace to the next output
 bindsym $mod+Shift+w move workspace to output right
 
-set $Locker xautolock -locknow && sleep 1
-
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
-mode "$mode_system" {
-    bindsym l exec --no-startup-id $Locker, mode "default"
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-bindsym $mod+Pause mode "$mode_system"
-
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
 	tray_output primary
         status_command i3status
 }
-
-# Put certain workspaces on the same monitor all the time
-workspace $ws10 output DVI-1
 
 # Floating windows
 for_window [class="Galculator"] floating enable
@@ -226,8 +205,6 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="keepassxc"] move scratchpad
 bindsym $mod+minus [class="keepassxc"] scratchpad show
 
-# Assign applications to specific workspaces
-assign [class="Firefox"] $ws1
 assign [class="Clementine"] $ws10
 # assign doesn't work with spotify: https://github.com/i3/i3/issues/2060
 # assign [class="Spotify"] $ws10

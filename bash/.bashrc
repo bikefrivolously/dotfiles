@@ -64,4 +64,7 @@ compile_and_run()
 }
 
 alias car=compile_and_run
-. /home/dmartins/anaconda3/etc/profile.d/conda.sh
+
+if [ -f /home/dmartins/anaconda3/etc/profile.d/conda.sh ]; then
+	. /home/dmartins/anaconda3/etc/profile.d/conda.sh
+fi
