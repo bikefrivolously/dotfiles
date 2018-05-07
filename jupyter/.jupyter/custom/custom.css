@@ -1,0 +1,15 @@
+/* Make cells wider in jupyter notebooks (getting rid of the useless border)
+ * from https://gist.github.com/paulochf/f6c9ed0b39f85dd85270#gistcomment-2251286
+ */
+
+.container {
+    width: 99% !important;
+}   
+
+div.cell.selected {
+    border-left-width: 1px !important;	
+}
+
+div.output_scroll {
+    resize: vertical !important;
+}
