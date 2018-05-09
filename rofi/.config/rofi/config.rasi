@@ -1,0 +1,4 @@
+configuration {
+    theme: "/home/dmartins/.config/rofi/themes/onedark.rasi";
+    window-format: "{w}\t{c}   {t}";
+}
