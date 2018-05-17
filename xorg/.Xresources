@@ -1,0 +1,65 @@
+! Some Xft settings
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+! Set a font.. not sure if i need to set a size or anything? It seems to work but is
+! a bit large
+URxvt.font: xft:hack:size=12
+
+URxvt.saveLines: 4000
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! When a pager is un use, scroll it instead of the buffer
+! Can't figure out what these actually do..
+!URxvt.secondaryScreen: false
+!URxvt.secondaryScroll: false
+
+! Colour scheme codeschool.dark from http://terminal.sexy
+! special
+URxvt.foreground:   #9ea7a6
+URxvt.background:   #232c31
+URxvt.cursorColor:  #9ea7a6
+
+! black
+URxvt.color0:       #232c31
+URxvt.color8:       #3f4944
+
+! red
+URxvt.color1:       #2a5491
+URxvt.color9:       #2a5491
+
+! green
+URxvt.color2:       #237986
+URxvt.color10:      #237986
+
+! yellow
+URxvt.color3:       #a03b1e
+URxvt.color11:      #a03b1e
+
+! blue
+URxvt.color4:       #484d79
+URxvt.color12:      #484d79
+
+! magenta
+URxvt.color5:       #c59820
+URxvt.color13:      #c59820
+
+! cyan
+URxvt.color6:       #b02f30
+URxvt.color14:      #b02f30
+
+! white
+URxvt.color7:       #9ea7a6
+URxvt.color15:      #b5d8f6
