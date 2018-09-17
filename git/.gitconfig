@@ -1,3 +1,5 @@
 [user]
 	name = Dan Martins
-	email = bikefrivolously@users.noreply.github.com
+	email = 19761930+bikefrivolously@users.noreply.github.com
+[core]
+	autocrlf = input

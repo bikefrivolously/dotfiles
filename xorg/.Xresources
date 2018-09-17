@@ -22,7 +22,7 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 
 ! When a pager is un use, scroll it instead of the buffer
-! Can't figure out what these actually do..
+! Cant figure out what these actually do..
 !URxvt.secondaryScreen: false
 !URxvt.secondaryScroll: false
 
