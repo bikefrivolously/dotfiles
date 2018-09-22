@@ -17,6 +17,17 @@ export VISUAL="vim"
 # Trying out termite, which sets TERM to xterm-termite
 #TERM=xterm-256color
 
+# Fix VTE for tilix
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+	source /etc/profile.d/vte.sh
+fi
+
+# Fix VTE for termite
+if [[ $TERM == xterm-termite ]]; then
+    . /etc/profile.d/vte.sh
+#    __vte_prompt_command
+fi
+
 ## Some settings for bash history ##
 # Increase the history size from the default 500
 HISTSIZE=10000
@@ -29,19 +40,8 @@ HISTTIMEFORMAT='[%F %T] '
 # Append to the history file instead of overwriting it on exit
 shopt -s histappend
 # Add each command to the history immediately after execution
+# Note - this needs to be after anything else that modifies PROMPT_COMMAND (like sourcing vte.sh)
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
-
-
-# Fix VTE for tilix
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-	source /etc/profile.d/vte.sh
-fi
-
-# Fix VTE for termite
-if [[ $TERM == xterm-termite ]]; then
-    . /etc/profile.d/vte.sh
-    __vte_prompt_command
-fi
 
 # termite needs BROWSER set to open URLs
 export BROWSER=xdg-open
