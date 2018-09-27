@@ -1,2 +1,4 @@
 export TERMINAL=termite
 PATH=${HOME}/bin:${PATH}
+PATH=${PATH}:${HOME}/STM32Toolchain/gcc-arm/bin
+
