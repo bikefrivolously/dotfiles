@@ -3,6 +3,7 @@ audible_bell = true
 urgent_on_bell = true
 font = Hack 10
 scrollback_lines = 10000
+fullscreen = false
 
 # This is the collection/x-dotshare scheme from http://terminal.sexy
 [colors]
