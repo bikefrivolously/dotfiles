@@ -115,7 +115,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: "
 set $ws2 "2: "
-set $ws3 "3"
+set $ws3 "3 "
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -230,6 +230,7 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="keepassxc"] move scratchpad
 bindsym $mod+minus [class="keepassxc"] scratchpad show
 
+assign [class="Evolution"] $ws3
 assign [class="Clementine"] $ws10
 # assign doesn't work with spotify: https://github.com/i3/i3/issues/2060
 # assign [class="Spotify"] $ws10
