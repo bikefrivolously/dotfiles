@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 
 PS1='[\u@\h \W]\$ '
 
-export VISUAL="vim"
+export VISUAL="nvim"
 
 # PATH is now set in ~/.xprofile. This makes it available to i3 and related graphical apps
 #PATH=${PATH}:~/bin
