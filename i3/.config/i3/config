@@ -219,7 +219,7 @@ bar {
 }
 
 # Put certain workspaces on the same monitor all the time
-workspace $ws10 output DVI-D-1
+workspace $ws10 output DVI-1
 
 # Floating windows
 for_window [class="Galculator"] floating enable
@@ -241,7 +241,7 @@ assign [class="Clementine"] $ws10
 for_window [class="Spotify"] move to workspace number $ws10
 
 #### Startup
-
+exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 # Set monitor layout and resolution as configured by arandr
 exec_always --no-startup-id /home/dmartins/.screenlayout/default.sh
 
@@ -249,7 +249,7 @@ exec_always --no-startup-id /home/dmartins/.screenlayout/default.sh
 exec_always --no-startup-id feh --bg-scale /home/dmartins/.wallpaper
 
 # Enable screen lock after idle timeout
-exec --no-startup-id xautolock -time 10 -locker "i3lock -c 000000"
+exec --no-startup-id xautolock -detectsleep -time 10 -locker "lock.sh" -notify 30 -notifier "notify-send -u critical -t 29000 -- 'LOCK IMMINENT' 'The screen will be locked in 30 seconds'"
 
 exec --no-startup-id compton
 exec keepassxc
