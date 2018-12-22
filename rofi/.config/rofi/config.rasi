@@ -1,4 +1,5 @@
 configuration {
     theme: "/home/dmartins/.config/rofi/themes/onedark.rasi";
     window-format: "{w}\t{c}   {t}";
+    ssh-command: "{terminal} -e '{ssh-client} {host}'";
 }
