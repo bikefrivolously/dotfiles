@@ -211,6 +211,8 @@ mode "$mode_system" {
 
 bindsym $mod+Pause mode "$mode_system"
 
+bindsym $mod+Shift+m exec pavucontrol
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -254,6 +256,8 @@ exec_always --no-startup-id feh --bg-scale /home/dmartins/.wallpaper
 
 # Enable screen lock after idle timeout
 exec --no-startup-id xautolock -detectsleep -time 10 -locker "lock.sh" -notify 30 -notifier "notify-send -u critical -t 29000 -- 'LOCK IMMINENT' 'The screen will be locked in 30 seconds'"
+
+exec --no-startup-id ~/bin/pulse-bell.sh
 
 exec --no-startup-id compton
 exec keepassxc
