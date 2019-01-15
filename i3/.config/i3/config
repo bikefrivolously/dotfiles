@@ -236,6 +236,7 @@ bindsym $mod+minus [class="keepassxc"] scratchpad show
 # Assign applications to specific workspaces
 assign [class="Firefox"] $ws1
 assign [class="Thunderbird"] $ws3
+assign [class="Evolution"] $ws3
 assign [class="Clementine"] $ws10
 # assign doesn't work with spotify: https://github.com/i3/i3/issues/2060
 # assign [class="Spotify"] $ws10
