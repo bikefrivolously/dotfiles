@@ -1,6 +1,5 @@
 export TERMINAL=termite
-PATH=${HOME}/bin:${PATH}
-PATH=${PATH}:${HOME}/STM32Toolchain/gcc-arm/bin
+PATH=${HOME}/bin:${HOME}/.local/bin:${PATH}:${HOME}/STM32Toolchain/gcc-arm/bin
 
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 
