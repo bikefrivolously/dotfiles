@@ -17,6 +17,11 @@ export VISUAL="nvim"
 # Trying out termite, which sets TERM to xterm-termite
 #TERM=xterm-256color
 
+# Testing this out. xterm-256color if not in tmux, but if in tmux, let it set TERM based on it's config
+if [ "$TERM" != "screen-256color" ] && [ "$TERM" != "screen" ]; then
+    TERM=xterm-256color
+fi
+
 # Fix VTE for tilix
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 	source /etc/profile.d/vte.sh
