@@ -12,7 +12,7 @@ fullscreen = false
 foreground      = #d7d0c7
 foreground_bold = #d7d0c7
 cursor          = #d7d0c7
-background      = #151515
+background      = rgba(21, 21, 21, 0.95)
 
 # black
 color0  = #101010
