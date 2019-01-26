@@ -1,4 +1,8 @@
 export TERMINAL=termite
+export EDITOR=nvim
+export VISUAL=nvim
+export BROWSER=firefox
+
 PATH=${HOME}/bin:${HOME}/.local/bin:${PATH}:${HOME}/STM32Toolchain/gcc-arm/bin
 
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'

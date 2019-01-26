@@ -9,14 +9,6 @@ alias ls='ls --color=auto'
 
 PS1='[\u@\h \W]\$ '
 
-export VISUAL="nvim"
-
-# PATH is now set in ~/.xprofile. This makes it available to i3 and related graphical apps
-#PATH=${PATH}:~/bin
-
-# Trying out termite, which sets TERM to xterm-termite
-#TERM=xterm-256color
-
 # Testing this out. xterm-256color if not in tmux, but if in tmux, let it set TERM based on it's config
 if [ "$TERM" != "screen-256color" ] && [ "$TERM" != "screen" ]; then
     TERM=xterm-256color
@@ -24,13 +16,12 @@ fi
 
 # Fix VTE for tilix
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-	source /etc/profile.d/vte.sh
+    . /etc/profile.d/vte.sh
 fi
 
 # Fix VTE for termite
 if [[ $TERM == xterm-termite ]]; then
     . /etc/profile.d/vte.sh
-#    __vte_prompt_command
 fi
 
 ## Some settings for bash history ##
@@ -47,9 +38,6 @@ shopt -s histappend
 # Add each command to the history immediately after execution
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-# termite needs BROWSER set to open URLs
-export BROWSER=xdg-open
-
 # ssh-agent setup
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > ~/.ssh-agent-thing
@@ -57,17 +45,6 @@ fi
 if [[ "$SSH_AGENT_PID" == "" ]]; then
     eval "$(<~/.ssh-agent-thing)"
 fi
-
-compile_and_run()
-{
-	src="$1"
-	dest="${src%.*}"
-	echo "Executing: $dest"
-	echo "======================================================"
-	g++ -Wall -Wpedantic --std=c++14 -o "$dest" "$src" && ./$dest
-}
-
-alias car=compile_and_run
 
 if [ -f /home/dmartins/anaconda3/etc/profile.d/conda.sh ]; then
 	. /home/dmartins/anaconda3/etc/profile.d/conda.sh
