@@ -247,7 +247,7 @@ for_window [class="Spotify"] move to workspace number $ws10
 exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 
 # Start gnome-keyring-daemon early, so PAM can unlock it automatically
-exec --no-startup-id gnome-keyring-daemon --start
+exec --no-startup-id gnome-keyring-daemon --start --components=secrets,pkcs11
 
 # Set monitor layout and resolution as configured by arandr
 exec_always --no-startup-id /home/dmartins/.screenlayout/default.sh
