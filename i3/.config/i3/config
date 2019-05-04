@@ -221,7 +221,7 @@ bar {
 }
 
 # Put certain workspaces on the same monitor all the time
-workspace $ws10 output DVI-1
+workspace $ws10 output DVI-D-0
 
 # Floating windows
 for_window [class="Galculator"] floating enable
