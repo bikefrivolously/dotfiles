@@ -2,3 +2,10 @@ export TERMINAL=termite
 PATH=${HOME}/bin:${PATH}
 PATH=${PATH}:${HOME}/STM32Toolchain/gcc-arm/bin
 
+# ssh-agent setup
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ "$SSH_AGENT_PID" == "" ]]; then
+    eval "$(<~/.ssh-agent-thing)"
+fi
