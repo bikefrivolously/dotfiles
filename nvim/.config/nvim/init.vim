@@ -13,6 +13,7 @@ endif
 Plug 'Shougo/deoplete-clangx'
 Plug 'Shougo/neoinclude.vim'
 Plug 'zchee/deoplete-jedi'
+Plug 'nathangrigg/vim-beancount'
 call plug#end()
 
 filetype plugin indent on
