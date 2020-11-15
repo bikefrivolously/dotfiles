@@ -49,3 +49,11 @@ fi
 if [ -f /home/dmartins/anaconda3/etc/profile.d/conda.sh ]; then
 	. /home/dmartins/anaconda3/etc/profile.d/conda.sh
 fi
+
+# Auto complete for AWS CLI
+complete -C aws_completer aws
+
+# Fuzzy Finder
+[ -r /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
+[ -r /usr/share/fzf/completion.bash ] && source /usr/share/fzf/completion.bash
+
